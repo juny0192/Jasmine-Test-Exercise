@@ -1,5 +1,6 @@
 let serverNameInput = document.getElementById("serverName");
 let serverForm = document.getElementById("serverForm");
+let serverTable = document.getElementById("serverTable");
 
 let serverTbody = document.querySelector("#serverTable tbody");
 
@@ -38,7 +39,10 @@ function updateServerTable() {
 
 		appendTd(newTr, curServer.serverName);
 		appendTd(newTr, "$" + tipAverage.toFixed(2));
+		appendDeleteBtn(newTr);
 
 		serverTbody.append(newTr);
 	}
 }
+
+
